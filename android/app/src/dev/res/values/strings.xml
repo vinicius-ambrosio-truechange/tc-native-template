@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name">DevAppTemplate</string>
-    <string name="hint_app_url_input">Your local Mendix Studio Pro URL</string>
-    <string name="launch_app_button">Launch</string>
-    <string name="neutral_button">Continue</string>
-    <string name="camera_permission_title">Camera permission</string>
-    <string name="camera_permission_message">To be able to read QR codes you need to grant the Camera permission.</string>
-    <string name="camera_permission_button">Continue</string>
-    <string name="packager_connection_timeout">Please verify that your Mendix App is running.</string>
-    <string name="qr_code_invalid">This is not a Mendix QR code.</string>
+    <string name="app_name">Dev-TCNativeTemplate</string>
+    <string name="hint_app_url_input">Informe a URL do Mendix Studio Pro</string>
+    <string name="launch_app_button">Executar App</string>
+    <string name="neutral_button">Continuar</string>
+    <string name="camera_permission_title">Permissão da Câmera</string>
+    <string name="camera_permission_message">Para ser capaz de ler QR codes, você deve habilitar a parmissão da câmera.</string>
+    <string name="camera_permission_button">Continuar</string>
+    <string name="packager_connection_timeout">Por favor verifique se seu Mendix App esta sendo executado.</string>
+    <string name="qr_code_invalid">Este não é um QR code Mendix.</string>
+    <string name="enable_developer_mode">Habilitar modo desenvolvedor</string>
+    <string name="clear_app_data">Limpar dados da aplicação</string>
+    <string name="host">Conectar com:</string>
+    <string name="tc_url_site">https://www.truechange.com.br</string>
 </resources>

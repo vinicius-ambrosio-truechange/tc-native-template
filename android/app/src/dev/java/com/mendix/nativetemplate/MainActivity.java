@@ -2,10 +2,13 @@ package com.mendix.nativetemplate;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -219,5 +222,24 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             startActivity(intent);
             disableUIInteraction(false);
         });
+    }
+
+    public void openTcUrl(View view) {
+        String link = getString(R.string.tc_url_site);
+        Log.d("MiN", "openTcUrl: " + link);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_REQUIRE_NON_BROWSER);
+        try {
+            startActivity(Intent.createChooser(intent, "Browse with"));
+        }
+        catch (ActivityNotFoundException e) {
+            Toast.makeText(
+                    getApplicationContext(),
+                    "Erro ao Abrir este Link!",
+                    Toast.LENGTH_SHORT
+            ).show();
+        }
     }
 }

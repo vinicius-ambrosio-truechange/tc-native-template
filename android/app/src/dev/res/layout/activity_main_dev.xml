@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/url_input_field"
-                android:text="Host:"
+                android:text="@string/host"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textSize="18sp"
@@ -76,9 +76,10 @@
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@color/mendix_green"
+            android:background="@color/tc_green"
             android:onClick="launchApp"
             android:text="@string/launch_app_button"
+            android:textAllCaps="false"
             android:textColor="@android:color/white" />
 
         <LinearLayout
@@ -91,8 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@android:color/white"
-                android:contentDescription="@string/enable_dev_mode"
-                android:text="@string/enable_dev_mode"
+                android:contentDescription="@string/enable_developer_mode"
+                android:text="@string/enable_developer_mode"
                 android:textColor="@android:color/white" />
 
             <CheckBox
@@ -100,10 +101,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@android:color/white"
-                android:contentDescription="@string/clear_data"
-                android:text="@string/clear_data"
+                android:contentDescription="clear_app_dataclear_data"
+                android:text="@string/clear_app_data"
                 android:textColor="@android:color/white" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button_tc_url_site"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/tc_url_site"
+            android:onClick="openTcUrl"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <RelativeLayout
